@@ -144,7 +144,8 @@ def main():
     def attr(key, name, mode, display, values, seq):
         r.append(rec(f"attr_{key}", "product.attribute", [("name", name), ("create_variant", mode), ("display_type", display), ("sequence", seq)]))
         for i, v in enumerate(values):
-            f = [("name", v[1]), ("attribute_id", ("ref", f"attr_{key}")), ("sequence", i + 1)]
+            # code: product_variant_default_code builds variant references from these (PP-GRA-MUS-M-PER)
+            f = [("name", v[1]), ("attribute_id", ("ref", f"attr_{key}")), ("sequence", i + 1), ("code", v[0])]
             if len(v) > 2 and v[2]:
                 f.append(v[2])
             r.append(rec(f"val_{key}_{v[0].lower()}", "product.attribute.value", f))
@@ -198,12 +199,12 @@ def main():
         ("partner_id", ("ref", "vendor_maali")), ("product_tmpl_id", ("ref", "pt_varimaali")), ("price", 45), ("delay", 5), ("min_qty", 1)]))
     # Maalattu runko: samat ominaisuudet kuin pyörällä (Malli, Koko, Väri) -> BOM-rivit täsmäävät ominaisuuksien perusteella
     r.append(rec("pt_maalattu_runko", "product.template", [
-        ("name", "Maalattu runko"), ("default_code", "MR"), ("type", "consu"), ("is_storable", True), ("categ_id", ("ref", "categ_sub")),
+        ("name", "Maalattu runko"), ("code_prefix", "MR-"), ("type", "consu"), ("is_storable", True), ("categ_id", ("ref", "categ_sub")),
         ("sale_ok", False), ("purchase_ok", False), ("route_ids", ("eval", mfg)),
         ("description", "<p>Alikokoonpano: raakarunko esikäsitellään ja maalataan omassa maalaamossa asiakkaan valitsemalla värillä.</p>"),
         ("attribute_line_ids", attr_lines((("malli", ALL["malli"]), ("koko", ALL["koko"]), ("vari", ALL["vari"]))))]))
     r.append(rec("pt_polkupyora", "product.template", [
-        ("name", "Polkupyörä"), ("default_code", "PP"), ("type", "consu"), ("is_storable", True), ("categ_id", ("ref", "categ_sale")),
+        ("name", "Polkupyörä"), ("code_prefix", "PP-"), ("type", "consu"), ("is_storable", True), ("categ_id", ("ref", "categ_sale")),
         ("list_price", 1190), ("sale_ok", True), ("purchase_ok", False), ("route_ids", ("eval", mfg)),
         ("allow_out_of_stock_order", True), ("is_published", True), ("public_categ_ids", ("eval", "[(6, 0, [ref('pubcat_bikes')])]")),
         ("sale_delay", 14),
@@ -223,6 +224,7 @@ def main():
     stock.update({f"MA-{c}": PAINT_STOCK for c, _, _ in COLORS})
     stock.update({a[0]: (2, 8, 5) for a in ACCESSORIES})
     (OUT.parent / "tools_data.py").write_text(
+        "# Copyright 2026 RockIT Oy\n# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).\n"
         '"""Generoitu: tools/generate_data.py. Varastoitavat nimikkeet: koodi -> (min, max, alkusaldo)."""\n'
         f"STOCK_PARTS = {stock!r}\nFRAME_COST = {FRAME_COST!r}\n", encoding="utf-8")
 

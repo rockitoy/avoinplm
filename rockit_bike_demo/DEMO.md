@@ -109,6 +109,10 @@ Esitys muuttaa kantaa (ECO, revisio, tilaukset): ota varmuuskopio ennen esityst�
 - Työpisteet: Esikäsittely, Maalaamo, Kokoonpano, Säätö ja laadunvarmistus, Pakkaus
 
 ## BOM-rakenne (v2, OCA mrp_bom_attribute_match)
+Variantit saavat tuotekoodin ominaisuusarvojen koodeista: Polkupyörä esimerkiksi *PP-GRA-MUS-M-PER*
+(etuliite PP-, malli, väri, koko, vaihteisto) ja Maalattu runko *MR-GRA-PUN-M* (etuliite MR-, malli, väri, koko).
+Raakarunkojen (RR-*) ja värimaalien (MA-*) koodit on annettu käsin, eivätkä ne muutu.
+
 Pyörän BOM *PP / B* on lyhyt: yksi tuotemallirivi *Maalattu runko*, jonka variantti valitaan pyörän
 ominaisuuksista Malli, Koko ja Väri, sekä mallikohtaiset osat (*Käytä varianteille*). Maalatun rungon BOM
 *MR / B* sisältää tuotemallirivit *Raakarunko* (Malli + Koko) ja *Värimaali* (Väri) sekä pohjamaalin ja lakan.

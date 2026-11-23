@@ -10,3 +10,8 @@ Internal references for PLM items when the revision is shown as its own field:
   automatic code is switched off for them, as it would give every variant the same code.
 - A new revision keeps the prefix, the mask and the generated codes; hand-set codes are
   copied.
+- The "Default Code can not be computed" warning on the product form is shown only when a
+  code is actually missing: an active variant has no internal reference, or the template
+  creates variants dynamically and not all of them exist yet (new ones will be coded
+  automatically). `product_variant_default_code` alone warns whenever the Reference Prefix
+  is empty, also when every variant already has a hand-set reference.

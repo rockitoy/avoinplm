@@ -408,6 +408,7 @@ def post_init_hook(env):
     _images(env)
     _frame_families(env)
     _clear_stale_template_codes(env)
+    _variant_code_prefixes(env)
     _ecr(env)
     _logger.info("rockit_bike_demo: alustus valmis")
 
@@ -428,6 +429,51 @@ def _clear_stale_template_codes(env):
         _logger.info("rockit_bike_demo: tuotemallin koodi tyhjennetään: %s", stale.mapped("default_code"))
         stale.write({"default_code": False})
     return stale
+
+
+# ---------------------------------------------------------------- varianttien tuotekoodit
+CODE_PREFIXES = {"pt_polkupyora": "PP-", "pt_maalattu_runko": "MR-"}
+
+
+def _variant_code_prefixes(env):
+    """Konfiguroitavien tuotemallien varianteille luettavat koodit (PP-GRA-MUS-M-PER, MR-GRA-M-PUN).
+
+    1. Ominaisuusarvoille koodi xmlid:n mukaan (val_malli_gra -> GRA), jos arvolla ei ole koodia tai
+       sillä on product_variant_default_coden automaattinen kahden merkin koodi (nimen alku). Käsin
+       annettu muu koodi jätetään ennalleen ja kirjataan lokiin.
+    2. Variantit, joilla ei ole koodia, merkitään automaattisiksi (Manual Reference pois). Ne olivat
+       käsin-tilassa vain siksi, että moduulin asennus merkitsi kaikki olemassa olevat variantit
+       käsin annetuiksi. Variantit, joilla on koodi (raakarungot RR-*, värimaalit MA-*), eivät muutu.
+    3. Tuotemallille koodin etuliite, ellei sitä ole; maski ja varianttien koodit lasketaan siitä.
+    Toistettava.
+    """
+    Value, Product = env["product.attribute.value"], env["product.product"]
+    for imd in env["ir.model.data"].search([("module", "=", M), ("model", "=", "product.attribute.value")]):
+        value = Value.browse(imd.res_id).exists()
+        target = imd.name.split("_", 2)[-1].upper()
+        if not value or value.code == target:
+            continue
+        if value.code and value.code != (value.name or "")[:2]:
+            _logger.info("rockit_bike_demo: arvon %s koodi %s on muokattu, ei muuteta", value.name, value.code)
+            continue
+        value.code = target
+    templates = env["product.template"]
+    for xid, prefix in CODE_PREFIXES.items():
+        tmpl = env.ref(f"{M}.{xid}", raise_if_not_found=False)
+        if not tmpl:
+            continue
+        templates |= tmpl
+        uncoded = tmpl.with_context(active_test=False).product_variant_ids.filtered(lambda v: not v.default_code)
+        if uncoded:
+            uncoded.write({"manual_code": False})
+        if not tmpl.code_prefix:
+            tmpl.code_prefix = prefix
+            tmpl.reference_mask = tmpl._get_default_mask()
+        if uncoded:
+            env.add_to_compute(Product._fields["default_code"], uncoded)
+            uncoded.flush_recordset(["default_code"])
+            _logger.info("rockit_bike_demo: %s variantille koodi: %s", tmpl.name, uncoded.mapped("default_code"))
+    return templates
 
 
 # ---------------------------------------------------------------- raakarungon malliperheet

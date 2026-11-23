@@ -4,7 +4,7 @@
     "name": "PLM variant internal references",
     "summary": "Internal references without the revision: PLM items keep their code over "
     "revisions, variant families get per-variant codes from product_variant_default_code",
-    "version": "20.0.1.1.0",
+    "version": "20.0.1.2.0",
     "development_status": "Beta",
     "category": "Manufacturing/Product Lifecycle Management (PLM)",
     "website": "https://github.com/rockitoy/avoinplm",

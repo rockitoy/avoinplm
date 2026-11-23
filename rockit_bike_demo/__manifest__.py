@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     "name": "RockIT bicycle demo (AvoinPLM, fictional data)",
-    "version": "20.0.2.4.0",
+    "version": "20.0.2.5.0",
     "development_status": "Beta",
     "summary": "Fictional demo company (Pyöräpaja Demo Oy): configurable bicycle in the "
     "webshop, two-level attribute BoM, paint shop, MTO purchasing, vendors, invoicing and "

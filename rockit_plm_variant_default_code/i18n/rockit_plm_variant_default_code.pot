@@ -71,3 +71,27 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:rockit_plm_variant_default_code.plm_component_base_tree
 msgid "Variant values"
 msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#. odoo-python
+#: code:addons/rockit_plm_variant_default_code/models/product.py:0
+msgid "Default Code can not be computed."
+msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#. odoo-python
+#: code:addons/rockit_plm_variant_default_code/models/product.py:0
+msgid "Reference Prefix is missing."
+msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#. odoo-python
+#: code:addons/rockit_plm_variant_default_code/models/product.py:0
+msgid "Following attribute value have an empty code :"
+msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#. odoo-python
+#: code:addons/rockit_plm_variant_default_code/models/product.py:0
+msgid "Variants without an internal reference:"
+msgstr ""

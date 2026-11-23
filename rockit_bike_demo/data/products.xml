@@ -877,7 +877,7 @@
 
         <record id="pt_maalattu_runko" model="product.template">
             <field name="name">Maalattu runko</field>
-            <field name="default_code">MR</field>
+            <field name="code_prefix">MR-</field>
             <field name="type">consu</field>
             <field name="is_storable" eval="True"/>
             <field name="categ_id" ref="categ_sub"/>
@@ -890,7 +890,7 @@
 
         <record id="pt_polkupyora" model="product.template">
             <field name="name">Polkupyörä</field>
-            <field name="default_code">PP</field>
+            <field name="code_prefix">PP-</field>
             <field name="type">consu</field>
             <field name="is_storable" eval="True"/>
             <field name="categ_id" ref="categ_sale"/>
