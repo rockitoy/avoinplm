@@ -1,0 +1,1 @@
+- Propose the fix to OmniaGit odooplm so this module is no longer needed.

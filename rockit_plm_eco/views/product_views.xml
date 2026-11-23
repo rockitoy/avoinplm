@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_template_form_view" model="ir.ui.view">
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="rockit_plm_floating_revision.product_template_form_view" />
+        <field name="arch" type="xml">
+            <field name="revision_phase_out" position="after">
+                <field name="plm_eco_id" invisible="not plm_eco_id" />
+            </field>
+        </field>
+    </record>
+    <record id="mrp_bom_form_view" model="ir.ui.view">
+        <field name="model">mrp.bom</field>
+        <field name="inherit_id" ref="mrp_bom_version.mrp_bom_version_form_view" />
+        <field name="arch" type="xml">
+            <field name="version" position="after">
+                <field name="plm_eco_id" invisible="not plm_eco_id" />
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,3 @@
+# Copyright 2026 RockIT Oy
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+from . import product_product, product_template  # noqa: F401

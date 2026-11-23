@@ -1,0 +1,831 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rockit_plm_eco
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-22 13:12+0000\n"
+"PO-Revision-Date: 2026-11-22 13:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "%(eco)s is already released."
+msgstr "%(eco)s on jo vapautettu."
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "%(eco)s: add the affected items or BoMs first."
+msgstr "%(eco)s: lisää ensin muutettavat nimikkeet tai osaluettelot."
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "%(eco)s: give the date the change is effective from."
+msgstr "%(eco)s: anna päivä, josta muutos on voimassa."
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "%(eco)s: release these revisions first: %(items)s"
+msgstr "%(eco)s: vapauta ensin nämä revisiot: %(items)s"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "%(how)s: variant and revision chosen at use time"
+msgstr "%(how)s: variantti ja revisio valitaan käyttöhetkellä"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid ""
+"%(item)s is not released (state %(state)s): a new revision can only be made "
+"from a released revision."
+msgstr ""
+"%(item)s ei ole vapautettu (tila %(state)s): uuden revision voi tehdä vain "
+"vapautetusta revisiosta."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__message_needaction
+msgid "Action Needed"
+msgstr "Toimenpiteitä vaaditaan"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__activity_ids
+msgid "Activities"
+msgstr "Toimenpiteet"
+
+#. module: rockit_plm_eco
+#: model:ir.model,name:rockit_plm_eco.model_mail_activity
+msgid "Activity"
+msgstr "Toimenpide"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Toimenpiteen poikkeuksen tunniste"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__activity_plans_ids
+msgid "Activity Plans"
+msgstr "Toimenpidesuunnitelmat"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__activity_state
+msgid "Activity State"
+msgstr "Toimenpiteen tila"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Toimenpiteen tyypin kuvake"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__line_ids
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid "Affected items"
+msgstr "Muutettavat nimikkeet"
+
+#. module: rockit_plm_eco
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid "Analyse impact"
+msgstr "Analysoi vaikutukset"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__impact_date
+msgid "Analysed"
+msgstr "Analysoitu"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco__effectivity
+msgid ""
+"Applied when the new revisions are released:\n"
+"- Use up old stock first: effective on release, free stock of the old revision is consumed first and counted in the new revision's replenishment.\n"
+"- Immediately: effective on release, the old revision is no longer used.\n"
+"- From a date: effective from the date, the old revision is used until then."
+msgstr ""
+"Otetaan käyttöön, kun uudet revisiot vapautetaan:\n"
+"- Käytä ensin vanha varasto: voimaan vapautettaessa, vanhan revision vapaa varasto käytetään ensin ja se huomioidaan uuden revision täydennyksessä.\n"
+"- Heti: voimaan vapautettaessa, vanhaa revisiota ei enää käytetä.\n"
+"- Päivästä alkaen: voimaan annetusta päivästä, vanhaa revisiota käytetään siihen asti."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__message_attachment_count
+msgid "Attachment Count"
+msgstr "Liitteiden määrä"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "Attribute match line"
+msgstr "Attribuuttivastaava rivi"
+
+#. module: rockit_plm_eco
+#: model:ir.model,name:rockit_plm_eco.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Osaluettelo"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__bom_id
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__bom_id
+msgid "BoM"
+msgstr "Osaluettelo"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__bom_change_ids
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid "BoM versions"
+msgstr "Osaluetteloversiot"
+
+#. module: rockit_plm_eco
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid "Cancel"
+msgstr "Peruuta"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco__state__cancel
+msgid "Cancelled"
+msgstr "Peruttu"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__note
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__note
+msgid "Change"
+msgstr "Muutos"
+
+#. module: rockit_plm_eco
+#: model:ir.actions.act_window,name:rockit_plm_eco.plm_eco_action
+#: model:ir.ui.menu,name:rockit_plm_eco.plm_eco_menu
+msgid "Change orders (ECO)"
+msgstr "Muutosmääräykset (ECO)"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__ecr_activity_id
+msgid "Change request (ECR)"
+msgstr "Muutospyyntö (ECR)"
+
+#. module: rockit_plm_eco
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid "Close ECO"
+msgstr "Sulje ECO"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "Component family"
+msgstr "Komponenttiperhe"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco_impact__kind__po
+msgid "Confirmed PO"
+msgstr "Vahvistettu ostotilaus"
+
+#. module: rockit_plm_eco
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid "Create revisions"
+msgstr "Luo revisiot"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__create_uid
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__create_uid
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__create_uid
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__create_date
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__create_date
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__create_date
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__date
+msgid "Date"
+msgstr "Päivämäärä"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__description
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid "Description"
+msgstr "Kuvaus"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_mail_activity__display_name
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_mrp_bom__display_name
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__display_name
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__display_name
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__display_name
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__display_name
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_product_template__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__document
+msgid "Document"
+msgstr "Asiakirja"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco__state__draft
+msgid "Draft"
+msgstr "Luonnos"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_mrp_bom__plm_eco_id
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_product_product__plm_eco_id
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_product_template__plm_eco_id
+msgid "ECO"
+msgstr "ECO"
+
+#. module: rockit_plm_eco
+#: model:ir.model,name:rockit_plm_eco.model_plm_eco_bom
+msgid "ECO BoM version change"
+msgstr "ECO:n osaluetteloversion muutos"
+
+#. module: rockit_plm_eco
+#: model:ir.model,name:rockit_plm_eco.model_plm_eco_line
+msgid "ECO affected item"
+msgstr "ECO:n muutettava nimike"
+
+#. module: rockit_plm_eco
+#: model:ir.model,name:rockit_plm_eco.model_plm_eco_impact
+msgid "ECO impact analysis line"
+msgstr "ECO:n vaikutusanalyysin rivi"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid ""
+"ECO released. Effectivity: %(eff)s%(date)s. Open orders on older revisions: "
+"%(orders)s (\"Open orders\" proposes the updates)."
+msgstr ""
+"ECO vapautettu. Voimaantulo: %(eff)s%(date)s. Avoimia tilauksia vanhoilla "
+"revisioilla: %(orders)s (\"Avoimet tilaukset\" ehdottaa päivitykset)."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_mail_activity__plm_eco_ids
+msgid "ECOs"
+msgstr "ECO:t"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__ecr_reference
+msgid "ECR"
+msgstr "ECR"
+
+#. module: rockit_plm_eco
+#: model:ir.module.module,summary:base.module_rockit_plm_eco
+msgid ""
+"ECR → ECO → revisions → effectivity: affected items, effectivity policy "
+"applied on release, impact analysis, BoM versions, ECO closes when released"
+msgstr ""
+"ECR → ECO → revisiot → voimaantulo: muutettavat nimikkeet, voimaantulotapa "
+"vapautettaessa, vaikutusanalyysi, osaluetteloversiot, ECO sulkeutuu "
+"vapautuksessa"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__eco_id
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__eco_id
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__eco_id
+msgid "Eco"
+msgstr "ECO"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__eco_bom_id
+msgid "Eco Bom"
+msgstr "ECO:n osaluettelo"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__eco_line_id
+msgid "Eco Line"
+msgstr "ECO:n rivi"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__effective_date
+msgid "Effective Date"
+msgstr "Voimaantulopäivä"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__effectivity
+msgid "Effectivity"
+msgstr "Voimaantulo"
+
+#. module: rockit_plm_eco
+#: model:ir.model,name:rockit_plm_eco.model_plm_eco
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid "Engineering change order"
+msgstr "Muutosmääräys (ECO)"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_mrp_bom__plm_eco_id
+msgid "Engineering change order that created this BoM version"
+msgstr "Muutosmääräys, joka loi tämän osaluetteloversion"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_product_product__plm_eco_id
+#: model:ir.model.fields,help:rockit_plm_eco.field_product_template__plm_eco_id
+msgid "Engineering change order that created this revision"
+msgstr "Muutosmääräys, joka loi tämän revision"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "Fixed line, exact revision: update the BoM"
+msgstr "Kiinteä rivi, tarkka revisio: päivitä osaluettelo"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "Fixed line, floating revision"
+msgstr "Kiinteä rivi, kelluva revisio"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__message_follower_ids
+msgid "Followers"
+msgstr "Seuraajat"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seuraajat (kumppanit)"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__free_qty
+msgid "Free"
+msgstr "Vapaa"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco__effectivity__date
+msgid "From a date"
+msgstr "Päivästä alkaen"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__has_message
+msgid "Has Message"
+msgstr "On viesti"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_mail_activity__id
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_mrp_bom__id
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__id
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__id
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__id
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__id
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_product_template__id
+msgid "ID"
+msgstr "ID"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__activity_exception_icon
+msgid "Icon"
+msgstr "Kuvake"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Poikkeustoimenpiteen kuvake."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Jos valittu, uudet viestit vaativat huomiota."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco__message_has_error
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Jos valittu, joidenkin viestien toimituksessa on virhe."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco__effectivity__immediate
+msgid "Immediately on release"
+msgstr "Heti vapautettaessa"
+
+#. module: rockit_plm_eco
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid "Impact"
+msgstr "Vaikutukset"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__impact_count
+msgid "Impact Count"
+msgstr "Vaikutusten määrä"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__impact_ids
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid "Impact analysis"
+msgstr "Vaikutusanalyysi"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "Implemented by %(eco)s"
+msgstr "Toteutettu: %(eco)s"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco__state__in_progress
+msgid "In progress"
+msgstr "Käynnissä"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__incoming_qty
+msgid "Incoming"
+msgstr "Saapuva"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__message_is_follower
+msgid "Is Follower"
+msgstr "On seuraaja"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__item
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__product_tmpl_id
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_search
+msgid "Item"
+msgstr "Nimike"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__kind
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_impact_view_search
+msgid "Kind"
+msgstr "Tyyppi"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__write_uid
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__write_uid
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__write_uid
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__write_date
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__write_date
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__write_date
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco_impact__kind__mo_component
+msgid "MO component"
+msgstr "Valmistustilauksen komponentti"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco_impact__kind__mo_product
+msgid "MO producing it"
+msgstr "Sitä valmistava valmistustilaus"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco__activity_type_icon
+msgid "Material Symbols icon e.g. checklist"
+msgstr "Material Symbols -kuvake, esim. checklist"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__message_has_error
+msgid "Message Delivery error"
+msgstr "Viestin toimitusvirhe"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__message_ids
+msgid "Messages"
+msgstr "Viestit"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Oman toimenpiteen määräpäivä"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__new_revision
+msgid "New rev."
+msgstr "Uusi rev."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__new_tmpl_id
+msgid "New revision"
+msgstr "Uusi revisio"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__new_state
+msgid "New revision state"
+msgstr "Uuden revision tila"
+
+#. module: rockit_plm_eco
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid ""
+"New revisions and draft BoM versions are created for the affected items. "
+"Continue?"
+msgstr ""
+"Muutettaville nimikkeille luodaan uudet revisiot ja osaluetteloversioiden "
+"luonnokset. Jatketaanko?"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid ""
+"New revisions: %(revs)s. Edit them, then confirm and release each revision; "
+"the ECO closes when all are released."
+msgstr ""
+"Uudet revisiot: %(revs)s. Muokkaa niitä, vahvista ja vapauta jokainen "
+"revisio; ECO sulkeutuu, kun kaikki on vapautettu."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__new_bom_id
+msgid "New version"
+msgstr "Uusi versio"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__new_version
+msgid "New version no."
+msgstr "Uuden version nro"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__new_state
+msgid "New version state"
+msgstr "Uuden version tila"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Seuraavan toimenpiteen määräpäivä"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__activity_summary
+msgid "Next Activity Summary"
+msgstr "Seuraavan toimenpiteen yhteenveto"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__activity_type_id
+msgid "Next Activity Type"
+msgstr "Seuraavan toimenpiteen tyyppi"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "No new revision was created for %(item)s."
+msgstr "Nimikkeelle %(item)s ei luotu uutta revisiota."
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "No revision of %(eco)s is released yet."
+msgstr "Yhtään revisiota (%(eco)s) ei ole vielä vapautettu."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__note
+msgid "Note"
+msgstr "Huomautus"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Toimenpiteiden määrä"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__message_has_error_counter
+msgid "Number of errors"
+msgstr "Virheiden määrä"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Toimenpiteitä vaativien viestien määrä"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Toimitusvirheellisten viestien määrä"
+
+#. module: rockit_plm_eco
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_search
+msgid "Open"
+msgstr "Avaa"
+
+#. module: rockit_plm_eco
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.mail_activity_view_form_popup
+msgid "Open ECO"
+msgstr "Avaa ECO"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__open_order_count
+msgid "Open Order Count"
+msgstr "Avoimien tilausten määrä"
+
+#. module: rockit_plm_eco
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid "Open orders"
+msgstr "Avoimet tilaukset"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "Open orders on older revisions"
+msgstr "Avoimet tilaukset vanhoilla revisioilla"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco_impact__kind__so
+msgid "Open sale"
+msgstr "Avoin myynti"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "Open sale: produced with the BoM version active at the MO"
+msgstr ""
+"Avoin myynti: valmistetaan valmistustilaushetkellä aktiivisella "
+"osaluetteloversiolla"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__outgoing_qty
+msgid "Outgoing"
+msgstr "Lähtevä"
+
+#. module: rockit_plm_eco
+#: model:ir.module.module,shortdesc:base.module_rockit_plm_eco
+msgid "PLM engineering change orders (ECO)"
+msgstr "PLM-muutosmääräykset (ECO)"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco_impact__revision
+msgid "PLM engineering revision of this item (empty when not a PLM item)."
+msgstr "Nimikkeen PLM-revisio (tyhjä, jos ei PLM-nimike)."
+
+#. module: rockit_plm_eco
+#: model:ir.actions.server,name:rockit_plm_eco.cron_activate_due_bom_versions_ir_actions_server
+msgid "PLM: activate BoM versions of ECOs effective today"
+msgstr "PLM: aktivoi tänään voimaan tulevien ECO:jen osaluetteloversiot"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__engineering_code
+msgid "Part Number"
+msgstr "Nimikekoodi"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__product_tmpl_id
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__product_id
+msgid "Product"
+msgstr "Tuote"
+
+#. module: rockit_plm_eco
+#: model:ir.model,name:rockit_plm_eco.model_product_template
+msgid "Product Template"
+msgstr "Tuotepohja"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__production_id
+msgid "Production"
+msgstr "Valmistustilaus"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__purchase_line_id
+msgid "Purchase Line"
+msgstr "Ostorivi"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__quantity
+msgid "Quantity"
+msgstr "Määrä"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco_impact__kind__rfq
+msgid "RFQ"
+msgstr "Tarjouspyyntö"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__rating_ids
+msgid "Ratings"
+msgstr "Arviot"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__name
+msgid "Reference"
+msgstr "Viite"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco__state__done
+msgid "Released"
+msgstr "Vapautettu"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__user_id
+msgid "Responsible"
+msgstr "Vastuuhenkilö"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__activity_user_id
+msgid "Responsible User"
+msgstr "Vastuukäyttäjä"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_impact__revision
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__current_revision
+msgid "Rev."
+msgstr "Rev."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_line__revise_documents
+msgid "Revise documents"
+msgstr "Revisioi asiakirjat"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS-toimitusvirhe"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__state
+msgid "State"
+msgstr "Tila"
+
+#. module: rockit_plm_eco
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_search
+msgid "Status"
+msgstr "Tila"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Tila toimenpiteiden perusteella\n"
+"Myöhässä: määräpäivä on mennyt\n"
+"Tänään: toimenpide on tänään\n"
+"Suunniteltu: tulevat toimenpiteet."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco_impact__kind__stock
+msgid "Stock"
+msgstr "Varasto"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco__ecr_reference
+msgid "Summary of the change request when the ECO was made"
+msgstr "Muutospyynnön yhteenveto ECO:n luontihetkellä"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco_line__engineering_code
+msgid ""
+"This is engineering reference to manage a different P/N from item Name."
+msgstr "Suunnitteluviite, jolla nimikekoodi erotetaan nimikkeen nimestä."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco__title
+msgid "Title"
+msgstr "Otsikko"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,help:rockit_plm_eco.field_plm_eco__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tietueen poikkeustoimenpiteen tyyppi."
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco__effectivity__use_up
+msgid "Use up old stock first"
+msgstr "Käytä ensin vanha varasto"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "Uses BoM version %(v)s"
+msgstr "Käyttää osaluetteloversiota %(v)s"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields,field_description:rockit_plm_eco.field_plm_eco_bom__version
+msgid "Version"
+msgstr "Versio"
+
+#. module: rockit_plm_eco
+#: model_terms:ir.ui.view,arch_db:rockit_plm_eco.plm_eco_view_form
+msgid "What changes and why"
+msgstr "Mitä muutetaan ja miksi"
+
+#. module: rockit_plm_eco
+#: model:ir.model.fields.selection,name:rockit_plm_eco.selection__plm_eco_impact__kind__where_used
+msgid "Where used"
+msgstr "Käyttökohteet"
+
+#. module: rockit_plm_eco
+#. odoo-python
+#: code:addons/rockit_plm_eco/models/plm_eco.py:0
+msgid "eco_id"
+msgstr "ECO"

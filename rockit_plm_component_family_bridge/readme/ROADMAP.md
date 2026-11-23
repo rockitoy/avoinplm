@@ -1,0 +1,1 @@
+- Follows the configurator modules; a future rules engine will need its own hooks here.

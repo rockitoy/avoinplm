@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tallennettu vientipohja: laskut CSV:nä ulkoiseen taloushallintoon (Laskutus > Asiakas-/Toimittajalaskut > valitse > Toiminto > Vie) -->
+<odoo>
+    <data noupdate="1">
+        <record id="export_invoices_accounting" model="ir.exports">
+            <field name="name">Taloushallintoon</field>
+            <field name="resource">account.move</field>
+            <field name="export_fields" eval="[(5, 0, 0)] + [(0, 0, {'name': f}) for f in [
+                'name', 'move_type', 'state', 'partner_id/name', 'partner_id/vat', 'invoice_date', 'invoice_date_due',
+                'ref', 'invoice_origin', 'currency_id/name', 'amount_untaxed', 'amount_tax', 'amount_total', 'payment_state']]"/>
+        </record>
+        <record id="export_invoice_lines_accounting" model="ir.exports">
+            <field name="name">Taloushallintoon (rivit)</field>
+            <field name="resource">account.move.line</field>
+            <field name="export_fields" eval="[(5, 0, 0)] + [(0, 0, {'name': f}) for f in [
+                'move_id/name', 'date', 'account_id/code', 'account_id/name', 'partner_id/name', 'name',
+                'debit', 'credit', 'balance', 'tax_ids/name']]"/>
+        </record>
+    </data>
+</odoo>

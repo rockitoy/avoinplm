@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="plm_eco_view_form" model="ir.ui.view">
+        <field name="model">plm.eco</field>
+        <field name="arch" type="xml">
+            <form string="Engineering change order">
+                <header>
+                    <button name="action_analyze" type="object" string="Analyse impact" invisible="state == 'cancel'" />
+                    <button name="action_start" type="object" string="Create revisions" class="btn-primary"
+                            invisible="state != 'draft'"
+                            confirm="New revisions and draft BoM versions are created for the affected items. Continue?" />
+                    <button name="action_done" type="object" string="Close ECO" class="btn-primary"
+                            invisible="state != 'in_progress'" />
+                    <button name="action_open_orders" type="object" string="Open orders"
+                            invisible="state not in ('in_progress', 'done')" />
+                    <button name="action_cancel" type="object" string="Cancel" invisible="state in ('done', 'cancel')" />
+                    <field name="state" widget="statusbar" statusbar_visible="draft,in_progress,done" />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="action_view_impact" type="object" icon="bar_chart">
+                            <field name="impact_count" widget="statinfo" string="Impact" />
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" /></h1>
+                        <h2><field name="title" placeholder="What changes and why" readonly="state in ('done', 'cancel')" /></h2>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="ecr_activity_id" readonly="1" invisible="not ecr_activity_id" />
+                            <field name="ecr_reference" readonly="1" invisible="not ecr_reference" />
+                            <field name="user_id" />
+                        </group>
+                        <group>
+                            <field name="effectivity" readonly="state in ('done', 'cancel')" widget="radio" />
+                            <field name="effective_date" invisible="effectivity != 'date'"
+                                   required="effectivity == 'date'" readonly="state in ('done', 'cancel')" />
+                            <field name="impact_date" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Affected items" name="items">
+                            <field name="line_ids" readonly="state in ('done', 'cancel')">
+                                <list editable="bottom">
+                                    <field name="product_tmpl_id" readonly="new_tmpl_id" />
+                                    <field name="current_revision" />
+                                    <field name="note" />
+                                    <field name="revise_documents" readonly="new_tmpl_id" />
+                                    <field name="new_tmpl_id" />
+                                    <field name="new_revision" />
+                                    <field name="new_state" />
+                                </list>
+                            </field>
+                        </page>
+                        <page string="BoM versions" name="boms">
+                            <field name="bom_change_ids" readonly="state in ('done', 'cancel')">
+                                <list editable="bottom">
+                                    <field name="bom_id" readonly="new_bom_id" />
+                                    <field name="version" />
+                                    <field name="note" />
+                                    <field name="new_bom_id" />
+                                    <field name="new_version" />
+                                    <field name="new_state" />
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Impact analysis" name="impact">
+                            <field name="impact_ids" readonly="1">
+                                <list>
+                                    <field name="kind" />
+                                    <field name="item" />
+                                    <field name="document" />
+                                    <field name="product_id" optional="show" />
+                                    <field name="revision" />
+                                    <field name="quantity" />
+                                    <field name="free_qty" optional="show" />
+                                    <field name="incoming_qty" optional="hide" />
+                                    <field name="date" optional="show" />
+                                    <field name="note" />
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Description" name="description">
+                            <field name="description" />
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter />
+            </form>
+        </field>
+    </record>
+    <record id="plm_eco_view_list" model="ir.ui.view">
+        <field name="model">plm.eco</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" />
+                <field name="title" />
+                <field name="ecr_reference" optional="show" />
+                <field name="effectivity" />
+                <field name="effective_date" optional="show" />
+                <field name="user_id" optional="show" />
+                <field name="state" widget="badge" decoration-success="state == 'done'" decoration-info="state == 'in_progress'" />
+            </list>
+        </field>
+    </record>
+    <record id="plm_eco_view_search" model="ir.ui.view">
+        <field name="model">plm.eco</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="title" />
+                <field name="line_ids" string="Item" filter_domain="[('line_ids.product_tmpl_id', 'ilike', self)]" />
+                <filter name="open" string="Open" domain="[('state', 'in', ('draft', 'in_progress'))]" />
+                <filter name="group_state" string="Status" context="{'group_by': 'state'}" />
+            </search>
+        </field>
+    </record>
+    <record id="plm_eco_impact_view_list" model="ir.ui.view">
+        <field name="model">plm.eco.impact</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="kind" />
+                <field name="item" />
+                <field name="document" />
+                <field name="product_id" />
+                <field name="revision" />
+                <field name="quantity" />
+                <field name="free_qty" />
+                <field name="date" />
+                <field name="note" />
+            </list>
+        </field>
+    </record>
+    <record id="plm_eco_impact_view_search" model="ir.ui.view">
+        <field name="model">plm.eco.impact</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="item" />
+                <field name="document" />
+                <filter name="group_kind" string="Kind" context="{'group_by': 'kind'}" />
+            </search>
+        </field>
+    </record>
+    <record id="plm_eco_action" model="ir.actions.act_window">
+        <field name="name">Change orders (ECO)</field>
+        <field name="res_model">plm.eco</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_open': 1}</field>
+    </record>
+    <menuitem id="plm_eco_menu" name="Change orders (ECO)" parent="plm.plm_menu" sequence="21"
+              action="plm_eco_action" groups="plm.group_plm_integration_user,mrp.group_mrp_user" />
+</odoo>

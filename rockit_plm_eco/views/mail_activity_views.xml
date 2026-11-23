@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="mail_activity_view_form_popup" model="ir.ui.view">
+        <field name="model">mail.activity</field>
+        <field name="inherit_id" ref="activity_validation.mail_activity_view_form_popup_inherit" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='plm_state']" position="before">
+                <field name="plm_eco_ids" invisible="1" />
+            </xpath>
+            <xpath expr="//button[@name='action_to_eco']" position="after">
+                <button string="Open ECO" name="action_plm_open_eco" type="object" class="btn-secondary"
+                        invisible="change_activity_type != 'request' or plm_state not in ['eco', 'done']" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

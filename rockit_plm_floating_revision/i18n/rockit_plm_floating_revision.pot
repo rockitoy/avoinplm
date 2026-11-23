@@ -1,0 +1,463 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rockit_plm_floating_revision
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-22 13:12+0000\n"
+"PO-Revision-Date: 2026-11-22 13:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rockit_plm_floating_revision
+#. odoo-python
+#: code:addons/rockit_plm_floating_revision/models/product_template.py:0
+msgid "%(qty)s to revision %(rev)s"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact__line_ids
+msgid "Affected documents"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_report_mrp_report_bom_structure
+msgid "BOM Overview Report"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_mrp_bom
+msgid "Bill of Material"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.module.module,summary:base.module_rockit_plm_floating_revision
+msgid ""
+"BoM lines use the effective released PLM revision at use time, superseded "
+"revisions are used up first; revision data is carried over to new revisions;"
+" revision column on products, BoM lines, MO components, purchase and stock "
+"moves"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#. odoo-python
+#: code:addons/rockit_plm_floating_revision/models/product_template.py:0
+msgid "Buy revision %(rev)s instead"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__can_update
+msgid "Can Update"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model_terms:ir.ui.view,arch_db:rockit_plm_floating_revision.plm_release_impact_form
+msgid "Close"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#. odoo-python
+#: code:addons/rockit_plm_floating_revision/models/product_template.py:0
+msgid "Confirmed MO produces the old revision: cancel and re-plan if needed"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields.selection,name:rockit_plm_floating_revision.selection__plm_release_impact_line__kind__po
+msgid "Confirmed purchase order"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#. odoo-python
+#: code:addons/rockit_plm_floating_revision/models/product_template.py:0
+msgid "Confirmed: agree a change with the vendor"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#. odoo-python
+#: code:addons/rockit_plm_floating_revision/models/product_template.py:0
+msgid "Covered by old revision stock (used up first)"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact__create_uid
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact__create_date
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__date
+msgid "Date"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_mrp_bom__display_name
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_mrp_bom_line__display_name
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_mrp_production__display_name
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact__display_name
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__display_name
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_product_product__display_name
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_product_rev_wizard__display_name
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_product_template__display_name
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_report_mrp_report_bom_structure__display_name
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_stock_move__display_name
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_stock_warehouse_orderpoint__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__document
+msgid "Document"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_product_product__revision_effective_date
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_product_template__revision_effective_date
+msgid "Effective from"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_product_product__revision_effective_date
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_product_template__revision_effective_date
+msgid ""
+"Floating BoM lines use this revision from this moment on. Set on release "
+"when empty."
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_mrp_bom_line__float_revision
+msgid "Floating revision"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_mrp_bom__id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_mrp_bom_line__id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_mrp_production__id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact__id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_product_product__id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_product_rev_wizard__id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_product_template__id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_report_mrp_report_bom_structure__id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_stock_move__id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_stock_move_line__id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_stock_warehouse_orderpoint__id
+msgid "ID"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields.selection,name:rockit_plm_floating_revision.selection__product_template__revision_phase_out__immediate
+msgid "Immediately"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__keep_qty
+msgid "Keep on old revision"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__kind
+msgid "Kind"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact__write_uid
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact__write_date
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact__line_count
+msgid "Line Count"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_mrp_production
+msgid "Manufacturing Order"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields.selection,name:rockit_plm_floating_revision.selection__plm_release_impact_line__kind__mo
+msgid "Manufacturing order component (not started)"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields.selection,name:rockit_plm_floating_revision.selection__plm_release_impact_line__kind__mo_product
+msgid "Manufacturing order producing the item"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_stock_warehouse_orderpoint
+msgid "Minimum Inventory Rule"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__move_id
+msgid "Move"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_stock_warehouse_orderpoint__plm_phase_in_qty
+msgid ""
+"Net forecast of superseded PLM revisions that are used up first (phase-out "
+"\"use up\"). It is counted in this rule's forecast: the current revision is "
+"only replenished for what the old stock does not cover, and a shortage of "
+"the old revision is replenished with the current one."
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#. odoo-python
+#: code:addons/rockit_plm_floating_revision/models/product_template.py:0
+msgid "Newer revision not effective at the MO start"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#. odoo-python
+#: code:addons/rockit_plm_floating_revision/models/product_template.py:0
+msgid "Newer revision not effective at the planned date"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model_terms:ir.ui.view,arch_db:rockit_plm_floating_revision.plm_release_impact_form
+msgid ""
+"Not started manufacturing orders and requests for quotation can be moved to the\n"
+"                    revision that is effective at their date. Old revision stock that is used up first\n"
+"                    stays on the old revision. Confirmed purchase orders are only listed: agree a change\n"
+"                    with the vendor."
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__note
+msgid "Note"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model_terms:ir.ui.view,arch_db:rockit_plm_floating_revision.product_template_form_view
+msgid ""
+"Open manufacturing and purchase orders that still use an older revision"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_plm_release_impact_line
+msgid "Open order line on an older PLM revision"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model_terms:ir.ui.view,arch_db:rockit_plm_floating_revision.product_template_form_view
+msgid "Open orders"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_plm_release_impact
+msgid "Open orders affected by a PLM revision"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#. odoo-python
+#: code:addons/rockit_plm_floating_revision/wizards/plm_release_impact.py:0
+#: model_terms:ir.ui.view,arch_db:rockit_plm_floating_revision.plm_release_impact_form
+msgid "Open orders on older revisions"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_mrp_production__product_revision
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_plm_release_impact_line__new_revision
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_plm_release_impact_line__revision
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_product_product__plm_revision
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_purchase_order_line__product_revision
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_stock_move__product_revision
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_stock_move_line__product_revision
+msgid "PLM engineering revision of this item (empty when not a PLM item)."
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.module.module,shortdesc:base.module_rockit_plm_floating_revision
+msgid "PLM floating revisions in manufacturing"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_product_product__revision_phase_out
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_product_template__revision_phase_out
+msgid "Phase-out when superseded"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#. odoo-python
+#: code:addons/rockit_plm_floating_revision/models/product_template.py:0
+msgid "Produce revision %(rev)s (draft MO: product and BoM updated)"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_product_product
+msgid "Product Product"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_product_rev_wizard
+msgid "Product Revision wizards"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__product_id
+msgid "Product now"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__production_id
+msgid "Production"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__new_product_id
+msgid "Proposed"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__purchase_line_id
+msgid "Purchase Line"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields.selection,name:rockit_plm_floating_revision.selection__plm_release_impact_line__kind__rfq
+msgid "Request for quotation"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__revision
+msgid "Rev. now"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__new_revision
+msgid "Rev. proposed"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_mrp_bom_line__component_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_mrp_production__product_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact__product_tmpl_id
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_product_product__plm_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_purchase_order_line__product_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_stock_move__product_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_stock_move_line__product_revision
+#: model_terms:ir.ui.view,arch_db:rockit_plm_floating_revision.product_template_form_view
+msgid "Revision"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#. odoo-python
+#: code:addons/rockit_plm_floating_revision/models/product_template.py:0
+msgid ""
+"Revision %(rev)s released. Open orders still on older revisions: %(mo)s "
+"manufacturing order component(s), %(rfq)s RFQ line(s), %(po)s confirmed "
+"purchase line(s). Review them with \"Open orders\" on the product."
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_mrp_bom_line__component_revision
+msgid ""
+"Revision on the line; '↻' = floating, the number is the revision effective "
+"now."
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model,name:rockit_plm_floating_revision.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_stock_warehouse_orderpoint__plm_phase_in_qty
+msgid "Superseded revision stock"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__update
+msgid "Update"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model_terms:ir.ui.view,arch_db:rockit_plm_floating_revision.plm_release_impact_form
+msgid "Update selected"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#. odoo-python
+#: code:addons/rockit_plm_floating_revision/wizards/plm_release_impact.py:0
+msgid "Updated %(count)s open order line(s) to revision %(rev)s: %(docs)s"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_mrp_bom_line__float_revision
+msgid ""
+"Use the revision of this PLM item that is effective at use time (and use up "
+"superseded revisions first) instead of exactly the revision on the line."
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields.selection,name:rockit_plm_floating_revision.selection__product_template__revision_phase_out__use_up
+msgid "Use up free stock first"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_product_product__revision_phase_out
+#: model:ir.model.fields,help:rockit_plm_floating_revision.field_product_template__revision_phase_out
+msgid ""
+"What floating BoM lines do with this revision once a newer revision is "
+"effective: consume its free stock first, or switch immediately."
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#: model:ir.model.fields,field_description:rockit_plm_floating_revision.field_plm_release_impact_line__wizard_id
+msgid "Wizard"
+msgstr ""
+
+#. module: rockit_plm_floating_revision
+#. odoo-python
+#: code:addons/rockit_plm_floating_revision/models/product_product.py:0
+msgid "Only OdooPLM release users can release a revision."
+msgstr ""

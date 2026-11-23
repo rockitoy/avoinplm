@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rockit_plm_variant_default_code
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-22 13:12+0000\n"
+"PO-Revision-Date: 2026-11-22 13:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rockit_plm_variant_default_code
+#: model:ir.model.fields,field_description:rockit_plm_variant_default_code.field_product_product__display_name
+#: model:ir.model.fields,field_description:rockit_plm_variant_default_code.field_product_template__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#: model:ir.model.fields,field_description:rockit_plm_variant_default_code.field_product_product__id
+#: model:ir.model.fields,field_description:rockit_plm_variant_default_code.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#: model:ir.module.module,summary:base.module_rockit_plm_variant_default_code
+msgid ""
+"Internal references without the revision: PLM items keep their code over "
+"revisions, variant families get per-variant codes from "
+"product_variant_default_code"
+msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#: model:ir.module.module,shortdesc:base.module_rockit_plm_variant_default_code
+msgid "PLM variant internal references"
+msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#: model:ir.model,name:rockit_plm_variant_default_code.model_product_product
+msgid "Product Product"
+msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#: model:ir.model,name:rockit_plm_variant_default_code.model_product_template
+#: model_terms:ir.ui.view,arch_db:rockit_plm_variant_default_code.plm_component_base_search
+msgid "Product Template"
+msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#: model_terms:ir.ui.view,arch_db:rockit_plm_variant_default_code.plm_component_base_search
+msgid "Engineering Code (family)"
+msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#: model_terms:ir.ui.view,arch_db:rockit_plm_variant_default_code.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:rockit_plm_variant_default_code.plm_component_base_tree
+msgid "Internal Reference"
+msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#: model_terms:ir.ui.view,arch_db:rockit_plm_variant_default_code.plm_component_base_search
+msgid "Variant value"
+msgstr ""
+
+#. module: rockit_plm_variant_default_code
+#: model_terms:ir.ui.view,arch_db:rockit_plm_variant_default_code.plm_component_base_tree
+msgid "Variant values"
+msgstr ""

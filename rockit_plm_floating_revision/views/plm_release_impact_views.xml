@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="plm_release_impact_form" model="ir.ui.view">
+        <field name="model">plm.release.impact</field>
+        <field name="arch" type="xml">
+            <form string="Open orders on older revisions">
+                <p class="text-muted">
+                    Not started manufacturing orders and requests for quotation can be moved to the
+                    revision that is effective at their date. Old revision stock that is used up first
+                    stays on the old revision. Confirmed purchase orders are only listed: agree a change
+                    with the vendor.
+                </p>
+                <field name="product_tmpl_id" invisible="1" />
+                <field name="line_ids" nolabel="1">
+                    <list editable="bottom" create="0" delete="0">
+                        <field name="update" readonly="not can_update" />
+                        <field name="kind" />
+                        <field name="document" />
+                        <field name="date" />
+                        <field name="product_id" />
+                        <field name="revision" />
+                        <field name="quantity" />
+                        <field name="keep_qty" optional="show" />
+                        <field name="new_product_id" />
+                        <field name="new_revision" />
+                        <field name="note" />
+                        <field name="can_update" column_invisible="1" />
+                    </list>
+                </field>
+                <footer>
+                    <button name="action_apply" type="object" string="Update selected" class="btn-primary" />
+                    <button special="cancel" string="Close" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="view_warehouse_orderpoint_tree_editable" model="ir.ui.view">
+        <field name="model">stock.warehouse.orderpoint</field>
+        <field name="inherit_id" ref="stock.view_warehouse_orderpoint_tree_editable" />
+        <field name="arch" type="xml">
+            <field name="qty_forecast" position="after">
+                <field name="plm_phase_in_qty" optional="show" />
+            </field>
+        </field>
+    </record>
+</odoo>

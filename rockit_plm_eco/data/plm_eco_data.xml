@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="seq_plm_eco" model="ir.sequence">
+        <field name="name">Engineering change order</field>
+        <field name="code">plm.eco</field>
+        <field name="prefix">ECO-</field>
+        <field name="padding">4</field>
+        <field name="implementation">no_gap</field>
+    </record>
+    <record id="cron_activate_due_bom_versions" model="ir.cron">
+        <field name="name">PLM: activate BoM versions of ECOs effective today</field>
+        <field name="model_id" ref="model_plm_eco" />
+        <field name="state">code</field>
+        <field name="code">model._cron_activate_due_bom_versions()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+    </record>
+</odoo>

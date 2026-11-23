@@ -1,0 +1,1 @@
+- A rules engine / formulas for configurable products is a possible next step (not started).

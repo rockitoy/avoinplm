@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Toimittajat, demoasiakkaat, tuoteryhmät ja työpisteet (generoitu: tools/generate_data.py) -->
+<odoo>
+    <data noupdate="1">
+        <record id="vendor_runko" model="res.partner">
+            <field name="name">Runkopaja Demo Oy</field>
+            <field name="is_company" eval="True"/>
+            <field name="city">Lahti</field>
+            <field name="country_id" ref="base.fi"/>
+            <field name="ref">DEMO-P01</field>
+            <field name="supplier_rank" eval="1"/>
+            <field name="comment">&lt;p&gt;KUVITTEELLINEN DEMOTOIMITTAJA (polkupyörädemo). Ei oikea yritys. Toimittaa: Raakarungot (alumiini ja teräs).&lt;/p&gt;</field>
+        </record>
+
+        <record id="vendor_komp" model="res.partner">
+            <field name="name">Komponenttitukku Demo Oy</field>
+            <field name="is_company" eval="True"/>
+            <field name="city">Vantaa</field>
+            <field name="country_id" ref="base.fi"/>
+            <field name="ref">DEMO-P02</field>
+            <field name="supplier_rank" eval="1"/>
+            <field name="comment">&lt;p&gt;KUVITTEELLINEN DEMOTOIMITTAJA (polkupyörädemo). Ei oikea yritys. Toimittaa: Voimansiirto, jarrut, ohjaamo, satulat, haarukat ja lisävarusteet.&lt;/p&gt;</field>
+        </record>
+
+        <record id="vendor_kiekko" model="res.partner">
+            <field name="name">Kiekko ja Rengas Demo Oy</field>
+            <field name="is_company" eval="True"/>
+            <field name="city">Jyväskylä</field>
+            <field name="country_id" ref="base.fi"/>
+            <field name="ref">DEMO-P03</field>
+            <field name="supplier_rank" eval="1"/>
+            <field name="comment">&lt;p&gt;KUVITTEELLINEN DEMOTOIMITTAJA (polkupyörädemo). Ei oikea yritys. Toimittaa: Kiekkosarjat ja renkaat.&lt;/p&gt;</field>
+        </record>
+
+        <record id="vendor_eveto" model="res.partner">
+            <field name="name">E-Veto Demo Oy</field>
+            <field name="is_company" eval="True"/>
+            <field name="city">Espoo</field>
+            <field name="country_id" ref="base.fi"/>
+            <field name="ref">DEMO-P04</field>
+            <field name="supplier_rank" eval="1"/>
+            <field name="comment">&lt;p&gt;KUVITTEELLINEN DEMOTOIMITTAJA (polkupyörädemo). Ei oikea yritys. Toimittaa: Sähköpyörän moottorit, akut ja näytöt.&lt;/p&gt;</field>
+        </record>
+
+        <record id="vendor_maali" model="res.partner">
+            <field name="name">Maalitukku Demo Oy</field>
+            <field name="is_company" eval="True"/>
+            <field name="city">Tampere</field>
+            <field name="country_id" ref="base.fi"/>
+            <field name="ref">DEMO-P05</field>
+            <field name="supplier_rank" eval="1"/>
+            <field name="comment">&lt;p&gt;KUVITTEELLINEN DEMOTOIMITTAJA (polkupyörädemo). Ei oikea yritys. Toimittaa: Pohjamaalit, värimaalit ja lakat.&lt;/p&gt;</field>
+        </record>
+
+        <record id="vendor_pien" model="res.partner">
+            <field name="name">Pienosa Demo Oy</field>
+            <field name="is_company" eval="True"/>
+            <field name="city">Oulu</field>
+            <field name="country_id" ref="base.fi"/>
+            <field name="ref">DEMO-P06</field>
+            <field name="supplier_rank" eval="1"/>
+            <field name="comment">&lt;p&gt;KUVITTEELLINEN DEMOTOIMITTAJA (polkupyörädemo). Ei oikea yritys. Toimittaa: Vaijerit, kiinnikkeet ja pakkausmateriaalit.&lt;/p&gt;</field>
+        </record>
+
+        <record id="customer_demo" model="res.partner">
+            <field name="name">Aino Asiakas (demo)</field>
+            <field name="street">Esimerkkikatu 1</field>
+            <field name="zip">33100</field>
+            <field name="city">Tampere</field>
+            <field name="country_id" ref="base.fi"/>
+            <field name="email">aino.asiakas@example.com</field>
+            <field name="customer_rank" eval="1"/>
+            <field name="comment">&lt;p&gt;Kuvitteellinen demoasiakas.&lt;/p&gt;</field>
+        </record>
+
+        <record id="customer_demo2" model="res.partner">
+            <field name="name">Pekka Pyöräilijä (demo)</field>
+            <field name="street">Esimerkkikatu 5</field>
+            <field name="zip">40100</field>
+            <field name="city">Jyväskylä</field>
+            <field name="country_id" ref="base.fi"/>
+            <field name="email">pekka.pyorailija@example.com</field>
+            <field name="customer_rank" eval="1"/>
+            <field name="comment">&lt;p&gt;Kuvitteellinen demoasiakas.&lt;/p&gt;</field>
+        </record>
+
+        <record id="categ_root" model="product.category">
+            <field name="name">Polkupyörädemo</field>
+        </record>
+
+        <record id="categ_sale" model="product.category">
+            <field name="name">Myytävät pyörät</field>
+            <field name="parent_id" ref="categ_root"/>
+        </record>
+
+        <record id="categ_acc" model="product.category">
+            <field name="name">Lisävarusteet</field>
+            <field name="parent_id" ref="categ_root"/>
+        </record>
+
+        <record id="categ_sub" model="product.category">
+            <field name="name">Alikokoonpanot</field>
+            <field name="parent_id" ref="categ_root"/>
+        </record>
+
+        <record id="categ_frame" model="product.category">
+            <field name="name">Raakarungot</field>
+            <field name="parent_id" ref="categ_root"/>
+        </record>
+
+        <record id="categ_comp" model="product.category">
+            <field name="name">Komponentit</field>
+            <field name="parent_id" ref="categ_root"/>
+        </record>
+
+        <record id="categ_ebike" model="product.category">
+            <field name="name">Sähkövetojärjestelmä</field>
+            <field name="parent_id" ref="categ_root"/>
+        </record>
+
+        <record id="categ_paint" model="product.category">
+            <field name="name">Maalit ja pintakäsittely</field>
+            <field name="parent_id" ref="categ_root"/>
+        </record>
+
+        <record id="categ_small" model="product.category">
+            <field name="name">Pienosat ja pakkaus</field>
+            <field name="parent_id" ref="categ_root"/>
+        </record>
+
+        <record id="wc_esik" model="mrp.workcenter">
+            <field name="name">Esikäsittely</field>
+            <field name="code">ESIK</field>
+            <field name="costs_hour" eval="45"/>
+            <field name="time_start" eval="5"/>
+            <field name="note">&lt;p&gt;Rungon pesu, rasvanpoisto ja hionta ennen maalausta.&lt;/p&gt;</field>
+        </record>
+
+        <record id="wc_maal" model="mrp.workcenter">
+            <field name="name">Maalaamo</field>
+            <field name="code">MAAL</field>
+            <field name="costs_hour" eval="55"/>
+            <field name="time_start" eval="5"/>
+            <field name="note">&lt;p&gt;Maalauskoppi ja kuivausuuni: pohjamaali, värimaali, lakka ja kuivaus.&lt;/p&gt;</field>
+        </record>
+
+        <record id="wc_koko" model="mrp.workcenter">
+            <field name="name">Kokoonpano</field>
+            <field name="code">KOKO</field>
+            <field name="costs_hour" eval="50"/>
+            <field name="time_start" eval="0"/>
+            <field name="note">&lt;p&gt;Pyörän kokoonpano maalatusta rungosta ja ostetuista osista.&lt;/p&gt;</field>
+        </record>
+
+        <record id="wc_saato" model="mrp.workcenter">
+            <field name="name">Säätö ja laadunvarmistus</field>
+            <field name="code">SQA</field>
+            <field name="costs_hour" eval="50"/>
+            <field name="time_start" eval="0"/>
+            <field name="note">&lt;p&gt;Vaihteiden ja jarrujen säätö, tarkistuslista ja koeajo.&lt;/p&gt;</field>
+        </record>
+
+        <record id="wc_pakk" model="mrp.workcenter">
+            <field name="name">Pakkaus</field>
+            <field name="code">PAKK</field>
+            <field name="costs_hour" eval="40"/>
+            <field name="time_start" eval="0"/>
+            <field name="note">&lt;p&gt;Pakkaus kuljetuslaatikkoon ja lähetyksen valmistelu.&lt;/p&gt;</field>
+        </record>
+
+        <record id="pubcat_bikes" model="product.public.category">
+            <field name="name">Polkupyörät</field>
+            <field name="sequence" eval="1"/>
+        </record>
+
+        <record id="pubcat_acc" model="product.public.category">
+            <field name="name">Lisävarusteet</field>
+            <field name="sequence" eval="2"/>
+        </record>
+    </data>
+</odoo>

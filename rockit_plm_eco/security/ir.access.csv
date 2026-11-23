@@ -1,0 +1,9 @@
+id,name,model_id,group_id/id,operation,domain
+access_plm_eco_user,plm.eco user,plm.eco,mrp.group_mrp_user,r,
+access_plm_eco_manager,plm.eco manager,plm.eco,plm.group_plm_integration_user,crud,
+access_plm_eco_line_user,plm.eco.line user,plm.eco.line,mrp.group_mrp_user,r,
+access_plm_eco_line_manager,plm.eco.line manager,plm.eco.line,plm.group_plm_integration_user,crud,
+access_plm_eco_bom_user,plm.eco.bom user,plm.eco.bom,mrp.group_mrp_user,r,
+access_plm_eco_bom_manager,plm.eco.bom manager,plm.eco.bom,plm.group_plm_integration_user,crud,
+access_plm_eco_impact_user,plm.eco.impact user,plm.eco.impact,mrp.group_mrp_user,r,
+access_plm_eco_impact_manager,plm.eco.impact manager,plm.eco.impact,plm.group_plm_integration_user,crud,

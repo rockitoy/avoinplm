@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Konfiguraattorin ominaisuudet (generoitu: tools/generate_data.py) -->
+<odoo>
+    <data noupdate="1">
+        <record id="attr_malli" model="product.attribute">
+            <field name="name">Malli</field>
+            <field name="create_variant">dynamic</field>
+            <field name="display_type">radio</field>
+            <field name="sequence" eval="1"/>
+        </record>
+
+        <record id="val_malli_maa" model="product.attribute.value">
+            <field name="name">Maasto</field>
+            <field name="attribute_id" ref="attr_malli"/>
+            <field name="sequence" eval="1"/>
+            <field name="default_extra_price" eval="900"/>
+        </record>
+
+        <record id="val_malli_man" model="product.attribute.value">
+            <field name="name">Maantie</field>
+            <field name="attribute_id" ref="attr_malli"/>
+            <field name="sequence" eval="2"/>
+            <field name="default_extra_price" eval="1000"/>
+        </record>
+
+        <record id="val_malli_gra" model="product.attribute.value">
+            <field name="name">Gravel</field>
+            <field name="attribute_id" ref="attr_malli"/>
+            <field name="sequence" eval="3"/>
+            <field name="default_extra_price" eval="800"/>
+        </record>
+
+        <record id="val_malli_kau" model="product.attribute.value">
+            <field name="name">Kaupunki</field>
+            <field name="attribute_id" ref="attr_malli"/>
+            <field name="sequence" eval="4"/>
+            <field name="default_extra_price" eval="0"/>
+        </record>
+
+        <record id="val_malli_sah" model="product.attribute.value">
+            <field name="name">Sähkö</field>
+            <field name="attribute_id" ref="attr_malli"/>
+            <field name="sequence" eval="5"/>
+            <field name="default_extra_price" eval="1900"/>
+        </record>
+
+        <record id="attr_vari" model="product.attribute">
+            <field name="name">Väri</field>
+            <field name="create_variant">dynamic</field>
+            <field name="display_type">color</field>
+            <field name="sequence" eval="2"/>
+        </record>
+
+        <record id="val_vari_mus" model="product.attribute.value">
+            <field name="name">Musta matta</field>
+            <field name="attribute_id" ref="attr_vari"/>
+            <field name="sequence" eval="1"/>
+            <field name="html_color">#2b2b2b</field>
+        </record>
+
+        <record id="val_vari_val" model="product.attribute.value">
+            <field name="name">Valkoinen</field>
+            <field name="attribute_id" ref="attr_vari"/>
+            <field name="sequence" eval="2"/>
+            <field name="html_color">#f4f4f2</field>
+        </record>
+
+        <record id="val_vari_pun" model="product.attribute.value">
+            <field name="name">Punainen</field>
+            <field name="attribute_id" ref="attr_vari"/>
+            <field name="sequence" eval="3"/>
+            <field name="html_color">#c62828</field>
+        </record>
+
+        <record id="val_vari_sin" model="product.attribute.value">
+            <field name="name">Sininen</field>
+            <field name="attribute_id" ref="attr_vari"/>
+            <field name="sequence" eval="4"/>
+            <field name="html_color">#1e5aa8</field>
+        </record>
+
+        <record id="val_vari_vih" model="product.attribute.value">
+            <field name="name">Vihreä</field>
+            <field name="attribute_id" ref="attr_vari"/>
+            <field name="sequence" eval="5"/>
+            <field name="html_color">#2e7d32</field>
+        </record>
+
+        <record id="attr_koko" model="product.attribute">
+            <field name="name">Koko</field>
+            <field name="create_variant">dynamic</field>
+            <field name="display_type">pills</field>
+            <field name="sequence" eval="3"/>
+        </record>
+
+        <record id="val_koko_s" model="product.attribute.value">
+            <field name="name">S (155–165 cm)</field>
+            <field name="attribute_id" ref="attr_koko"/>
+            <field name="sequence" eval="1"/>
+        </record>
+
+        <record id="val_koko_m" model="product.attribute.value">
+            <field name="name">M (165–175 cm)</field>
+            <field name="attribute_id" ref="attr_koko"/>
+            <field name="sequence" eval="2"/>
+        </record>
+
+        <record id="val_koko_l" model="product.attribute.value">
+            <field name="name">L (175–185 cm)</field>
+            <field name="attribute_id" ref="attr_koko"/>
+            <field name="sequence" eval="3"/>
+        </record>
+
+        <record id="val_koko_xl" model="product.attribute.value">
+            <field name="name">XL (185–195 cm)</field>
+            <field name="attribute_id" ref="attr_koko"/>
+            <field name="sequence" eval="4"/>
+        </record>
+
+        <record id="attr_vaiht" model="product.attribute">
+            <field name="name">Vaihteisto</field>
+            <field name="create_variant">dynamic</field>
+            <field name="display_type">radio</field>
+            <field name="sequence" eval="4"/>
+        </record>
+
+        <record id="val_vaiht_per" model="product.attribute.value">
+            <field name="name">Perus (1×10)</field>
+            <field name="attribute_id" ref="attr_vaiht"/>
+            <field name="sequence" eval="1"/>
+            <field name="default_extra_price" eval="0"/>
+        </record>
+
+        <record id="val_vaiht_pre" model="product.attribute.value">
+            <field name="name">Premium (1×12)</field>
+            <field name="attribute_id" ref="attr_vaiht"/>
+            <field name="sequence" eval="2"/>
+            <field name="default_extra_price" eval="490"/>
+        </record>
+    </data>
+</odoo>

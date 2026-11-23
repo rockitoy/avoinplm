@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2026 RockIT Oy
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- Engineering Parts: a variant family shares the PLM code and revision (design level),
+         each variant has its own internal reference and attribute values (logistics level). -->
+    <record id="plm_component_base_tree" model="ir.ui.view">
+        <field name="name">plm.base.component.tree (variant references)</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="plm.plm_component_base_tree" />
+        <field name="arch" type="xml">
+            <list position="attributes">
+                <attribute name="expand">1</attribute>
+            </list>
+            <field name="name" position="before">
+                <field name="default_code" position="move" />
+                <field name="product_template_variant_value_ids" widget="many2many_tags"
+                       string="Variant values" optional="show" />
+            </field>
+            <field name="default_code" position="attributes">
+                <attribute name="optional">show</attribute>
+                <attribute name="string">Internal Reference</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="plm_component_base_search" model="ir.ui.view">
+        <field name="name">plm.base.component.search (families)</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="plm.plm_component_base_search" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="default_code" string="Internal Reference" />
+                <field name="product_template_variant_value_ids" string="Variant value" />
+            </field>
+            <filter name="status" position="after">
+                <separator orientation="vertical" />
+                <filter name="group_engineering_code" string="Engineering Code (family)"
+                        context="{'group_by': 'engineering_code'}" />
+                <filter name="group_product_tmpl" string="Product Template"
+                        context="{'group_by': 'product_tmpl_id'}" />
+            </filter>
+        </field>
+    </record>
+
+    <!-- Engineering Parts menu: latest revisions grouped by family -->
+    <record id="plm.action_plm_component_base" model="ir.actions.act_window">
+        <field name="context">{"search_default_latest": 1, "search_default_group_engineering_code": 1, "odooPLM": True}</field>
+    </record>
+</odoo>

@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nimikkeet, toimittajahinnat ja myytävät tuotteet (generoitu: tools/generate_data.py) -->
+<odoo>
+    <data noupdate="1">
+        <record id="pt_ma_pohja" model="product.template">
+            <field name="name">Pohjamaali (epoksi)</field>
+            <field name="default_code">MA-POHJA</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_paint"/>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="standard_price" eval="28"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ma_pohja_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_maali"/>
+            <field name="product_tmpl_id" ref="pt_ma_pohja"/>
+            <field name="price" eval="28"/>
+            <field name="delay" eval="5"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ma_lakka" model="product.template">
+            <field name="name">Kirkaslakka (2K)</field>
+            <field name="default_code">MA-LAKKA</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_paint"/>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="standard_price" eval="38"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ma_lakka_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_maali"/>
+            <field name="product_tmpl_id" ref="pt_ma_lakka"/>
+            <field name="price" eval="38"/>
+            <field name="delay" eval="5"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ha_maa" model="product.template">
+            <field name="name">Joustohaarukka 29" 120 mm</field>
+            <field name="default_code">HA-MAA</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="240"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ha_maa_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_ha_maa"/>
+            <field name="price" eval="240"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ks_maa" model="product.template">
+            <field name="name">Kiekkosarja 29" Boost</field>
+            <field name="default_code">KS-MAA</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="190"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ks_maa_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_kiekko"/>
+            <field name="product_tmpl_id" ref="pt_ks_maa"/>
+            <field name="price" eval="190"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_re_maa" model="product.template">
+            <field name="name">Renkaat 29×2,4 (pari)</field>
+            <field name="default_code">RE-MAA</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="60"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_re_maa_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_kiekko"/>
+            <field name="product_tmpl_id" ref="pt_re_maa"/>
+            <field name="price" eval="60"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ha_man" model="product.template">
+            <field name="name">Hiilikuituhaarukka maantie</field>
+            <field name="default_code">HA-MAN</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="160"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ha_man_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_ha_man"/>
+            <field name="price" eval="160"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ks_man" model="product.template">
+            <field name="name">Kiekkosarja 700c maantie</field>
+            <field name="default_code">KS-MAN</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="220"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ks_man_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_kiekko"/>
+            <field name="product_tmpl_id" ref="pt_ks_man"/>
+            <field name="price" eval="220"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_re_man" model="product.template">
+            <field name="name">Renkaat 700×28 (pari)</field>
+            <field name="default_code">RE-MAN</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="50"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_re_man_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_kiekko"/>
+            <field name="product_tmpl_id" ref="pt_re_man"/>
+            <field name="price" eval="50"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ha_gra" model="product.template">
+            <field name="name">Hiilikuituhaarukka gravel</field>
+            <field name="default_code">HA-GRA</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="150"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ha_gra_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_ha_gra"/>
+            <field name="price" eval="150"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ks_gra" model="product.template">
+            <field name="name">Kiekkosarja 700c gravel</field>
+            <field name="default_code">KS-GRA</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="200"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ks_gra_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_kiekko"/>
+            <field name="product_tmpl_id" ref="pt_ks_gra"/>
+            <field name="price" eval="200"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_re_gra" model="product.template">
+            <field name="name">Renkaat 700×40 (pari)</field>
+            <field name="default_code">RE-GRA</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="55"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_re_gra_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_kiekko"/>
+            <field name="product_tmpl_id" ref="pt_re_gra"/>
+            <field name="price" eval="55"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ha_kau" model="product.template">
+            <field name="name">Teräshaarukka kaupunki 28"</field>
+            <field name="default_code">HA-KAU</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="35"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ha_kau_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_ha_kau"/>
+            <field name="price" eval="35"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ks_kau" model="product.template">
+            <field name="name">Kiekkosarja 28" kaupunki</field>
+            <field name="default_code">KS-KAU</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="90"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ks_kau_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_kiekko"/>
+            <field name="product_tmpl_id" ref="pt_ks_kau"/>
+            <field name="price" eval="90"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_re_kau" model="product.template">
+            <field name="name">Renkaat 28×1,6 heijastinraidalla (pari)</field>
+            <field name="default_code">RE-KAU</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="30"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_re_kau_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_kiekko"/>
+            <field name="product_tmpl_id" ref="pt_re_kau"/>
+            <field name="price" eval="30"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ha_sah" model="product.template">
+            <field name="name">Joustohaarukka 27,5" 100 mm (e-bike)</field>
+            <field name="default_code">HA-SAH</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="180"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ha_sah_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_ha_sah"/>
+            <field name="price" eval="180"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ks_sah" model="product.template">
+            <field name="name">Kiekkosarja 27,5" vahvistettu (e-bike)</field>
+            <field name="default_code">KS-SAH</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="160"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ks_sah_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_kiekko"/>
+            <field name="product_tmpl_id" ref="pt_ks_sah"/>
+            <field name="price" eval="160"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_re_sah" model="product.template">
+            <field name="name">Renkaat 27,5×2,6 E-rated (pari)</field>
+            <field name="default_code">RE-SAH</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="65"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_re_sah_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_kiekko"/>
+            <field name="product_tmpl_id" ref="pt_re_sah"/>
+            <field name="price" eval="65"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_vs_per" model="product.template">
+            <field name="name">Voimansiirtosarja Perus 1×10</field>
+            <field name="default_code">VS-PER</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="140"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_vs_per_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_vs_per"/>
+            <field name="price" eval="140"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_vs_pre" model="product.template">
+            <field name="name">Voimansiirtosarja Premium 1×12</field>
+            <field name="default_code">VS-PRE</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="420"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(6, 0, [ref('stock.route_warehouse0_mto')])]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike. Tilausohjautuva osto (MTO + Osta).</field>
+        </record>
+
+        <record id="pt_vs_pre_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_vs_pre"/>
+            <field name="price" eval="420"/>
+            <field name="delay" eval="5"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ja_van" model="product.template">
+            <field name="name">Vannejarrusarja</field>
+            <field name="default_code">JA-VAN</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="30"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ja_van_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_ja_van"/>
+            <field name="price" eval="30"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ja_lev" model="product.template">
+            <field name="name">Hydraulinen levyjarrusarja</field>
+            <field name="default_code">JA-LEV</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="120"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_ja_lev_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_ja_lev"/>
+            <field name="price" eval="120"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_oh_drop" model="product.template">
+            <field name="name">Ohjaamosarja, drop-tanko + stemmi</field>
+            <field name="default_code">OH-DROP</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="70"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_oh_drop_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_oh_drop"/>
+            <field name="price" eval="70"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_oh_suo" model="product.template">
+            <field name="name">Ohjaamosarja, suora tanko + stemmi</field>
+            <field name="default_code">OH-SUO</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="45"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_oh_suo_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_oh_suo"/>
+            <field name="price" eval="45"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_sa_sat" model="product.template">
+            <field name="name">Satula</field>
+            <field name="default_code">SA-SAT</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="25"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_sa_sat_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_sa_sat"/>
+            <field name="price" eval="25"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_sa_tol" model="product.template">
+            <field name="name">Satulatolppa 31,6 mm</field>
+            <field name="default_code">SA-TOL</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="18"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_sa_tol_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_sa_tol"/>
+            <field name="price" eval="18"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_po_alu" model="product.template">
+            <field name="name">Polkimet, alumiini</field>
+            <field name="default_code">PO-ALU</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_comp"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="15"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_po_alu_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_po_alu"/>
+            <field name="price" eval="15"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ev_moot" model="product.template">
+            <field name="name">Keskimoottori 250 W</field>
+            <field name="default_code">EV-MOOT</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_ebike"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="520"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(6, 0, [ref('stock.route_warehouse0_mto')])]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike. Tilausohjautuva osto (MTO + Osta).</field>
+        </record>
+
+        <record id="pt_ev_moot_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_eveto"/>
+            <field name="product_tmpl_id" ref="pt_ev_moot"/>
+            <field name="price" eval="520"/>
+            <field name="delay" eval="10"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ev_akku" model="product.template">
+            <field name="name">Akku 500 Wh</field>
+            <field name="default_code">EV-AKKU</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_ebike"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="380"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(6, 0, [ref('stock.route_warehouse0_mto')])]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike. Tilausohjautuva osto (MTO + Osta).</field>
+        </record>
+
+        <record id="pt_ev_akku_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_eveto"/>
+            <field name="product_tmpl_id" ref="pt_ev_akku"/>
+            <field name="price" eval="380"/>
+            <field name="delay" eval="10"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_ev_nayt" model="product.template">
+            <field name="name">Näyttö ja ohjausyksikkö</field>
+            <field name="default_code">EV-NAYT</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_ebike"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="85"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(6, 0, [ref('stock.route_warehouse0_mto')])]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike. Tilausohjautuva osto (MTO + Osta).</field>
+        </record>
+
+        <record id="pt_ev_nayt_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_eveto"/>
+            <field name="product_tmpl_id" ref="pt_ev_nayt"/>
+            <field name="price" eval="85"/>
+            <field name="delay" eval="10"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_pi_vaij" model="product.template">
+            <field name="name">Vaijeri- ja kuorisarja</field>
+            <field name="default_code">PI-VAIJ</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_small"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="6"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_pi_vaij_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_pien"/>
+            <field name="product_tmpl_id" ref="pt_pi_vaij"/>
+            <field name="price" eval="6"/>
+            <field name="delay" eval="3"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_pi_pult" model="product.template">
+            <field name="name">Pultti- ja kiinnikesarja</field>
+            <field name="default_code">PI-PULT</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_small"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="4"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_pi_pult_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_pien"/>
+            <field name="product_tmpl_id" ref="pt_pi_pult"/>
+            <field name="price" eval="4"/>
+            <field name="delay" eval="3"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_pi_laat" model="product.template">
+            <field name="name">Pyörän pakkauslaatikko</field>
+            <field name="default_code">PI-LAAT</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_small"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price" eval="8"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike.</field>
+        </record>
+
+        <record id="pt_pi_laat_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_pien"/>
+            <field name="product_tmpl_id" ref="pt_pi_laat"/>
+            <field name="price" eval="8"/>
+            <field name="delay" eval="3"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_lv_loka" model="product.template">
+            <field name="name">Lokasuojasarja</field>
+            <field name="default_code">LV-LOKA</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_acc"/>
+            <field name="standard_price" eval="15"/>
+            <field name="list_price" eval="49"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="allow_out_of_stock_order" eval="True"/>
+            <field name="is_published" eval="True"/>
+            <field name="public_categ_ids" eval="[(6, 0, [ref('pubcat_acc')])]"/>
+            <field name="description_sale">Etu- ja takalokasuoja, sopii kaikkiin malleihin.</field>
+            <field name="description_ecommerce">&lt;p&gt;Etu- ja takalokasuoja, sopii kaikkiin malleihin.&lt;/p&gt;</field>
+        </record>
+
+        <record id="pt_lv_loka_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_lv_loka"/>
+            <field name="price" eval="15"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_lv_teli" model="product.template">
+            <field name="name">Tavarateline</field>
+            <field name="default_code">LV-TELI</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_acc"/>
+            <field name="standard_price" eval="20"/>
+            <field name="list_price" eval="59"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="allow_out_of_stock_order" eval="True"/>
+            <field name="is_published" eval="True"/>
+            <field name="public_categ_ids" eval="[(6, 0, [ref('pubcat_acc')])]"/>
+            <field name="description_sale">Alumiininen takateline, kantavuus 25 kg.</field>
+            <field name="description_ecommerce">&lt;p&gt;Alumiininen takateline, kantavuus 25 kg.&lt;/p&gt;</field>
+        </record>
+
+        <record id="pt_lv_teli_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_lv_teli"/>
+            <field name="price" eval="20"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_lv_valo" model="product.template">
+            <field name="name">Valosarja (LED etu + taka)</field>
+            <field name="default_code">LV-VALO</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_acc"/>
+            <field name="standard_price" eval="14"/>
+            <field name="list_price" eval="39"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="allow_out_of_stock_order" eval="True"/>
+            <field name="is_published" eval="True"/>
+            <field name="public_categ_ids" eval="[(6, 0, [ref('pubcat_acc')])]"/>
+            <field name="description_sale">USB-ladattava valosarja.</field>
+            <field name="description_ecommerce">&lt;p&gt;USB-ladattava valosarja.&lt;/p&gt;</field>
+        </record>
+
+        <record id="pt_lv_valo_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_lv_valo"/>
+            <field name="price" eval="14"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_lv_lukko" model="product.template">
+            <field name="name">U-lukko</field>
+            <field name="default_code">LV-LUKKO</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_acc"/>
+            <field name="standard_price" eval="16"/>
+            <field name="list_price" eval="45"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="allow_out_of_stock_order" eval="True"/>
+            <field name="is_published" eval="True"/>
+            <field name="public_categ_ids" eval="[(6, 0, [ref('pubcat_acc')])]"/>
+            <field name="description_sale">Karkaistu U-lukko kiinnikkeellä.</field>
+            <field name="description_ecommerce">&lt;p&gt;Karkaistu U-lukko kiinnikkeellä.&lt;/p&gt;</field>
+        </record>
+
+        <record id="pt_lv_lukko_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_komp"/>
+            <field name="product_tmpl_id" ref="pt_lv_lukko"/>
+            <field name="price" eval="16"/>
+            <field name="delay" eval="7"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_raakarunko" model="product.template">
+            <field name="name">Raakarunko</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_frame"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike. Hitsattu raakarunko ilman pintakäsittelyä, malli ja koko varianttina.</field>
+            <field name="attribute_line_ids" eval="[(0, 0, {'attribute_id': ref('attr_malli'), 'value_ids': [(6, 0, [ref('val_malli_maa'), ref('val_malli_man'), ref('val_malli_gra'), ref('val_malli_kau'), ref('val_malli_sah')])]}), (0, 0, {'attribute_id': ref('attr_koko'), 'value_ids': [(6, 0, [ref('val_koko_s'), ref('val_koko_m'), ref('val_koko_l'), ref('val_koko_xl')])]})]"/>
+        </record>
+
+        <record id="pt_varimaali" model="product.template">
+            <field name="name">Värimaali</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_paint"/>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="standard_price" eval="45"/>
+            <field name="list_price" eval="0"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="route_ids" eval="[(5, 0, 0)]"/>
+            <field name="description_purchase">Kuvitteellinen demonimike. Sävy varianttina.</field>
+            <field name="attribute_line_ids" eval="[(0, 0, {'attribute_id': ref('attr_vari'), 'value_ids': [(6, 0, [ref('val_vari_mus'), ref('val_vari_val'), ref('val_vari_pun'), ref('val_vari_sin'), ref('val_vari_vih')])]})]"/>
+        </record>
+
+        <record id="pt_varimaali_seller" model="product.supplierinfo">
+            <field name="partner_id" ref="vendor_maali"/>
+            <field name="product_tmpl_id" ref="pt_varimaali"/>
+            <field name="price" eval="45"/>
+            <field name="delay" eval="5"/>
+            <field name="min_qty" eval="1"/>
+        </record>
+
+        <record id="pt_maalattu_runko" model="product.template">
+            <field name="name">Maalattu runko</field>
+            <field name="default_code">MR</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_sub"/>
+            <field name="sale_ok" eval="False"/>
+            <field name="purchase_ok" eval="False"/>
+            <field name="route_ids" eval="[(6, 0, [ref('stock.route_warehouse0_mto')])]"/>
+            <field name="description">&lt;p&gt;Alikokoonpano: raakarunko esikäsitellään ja maalataan omassa maalaamossa asiakkaan valitsemalla värillä.&lt;/p&gt;</field>
+            <field name="attribute_line_ids" eval="[(0, 0, {'attribute_id': ref('attr_malli'), 'value_ids': [(6, 0, [ref('val_malli_maa'), ref('val_malli_man'), ref('val_malli_gra'), ref('val_malli_kau'), ref('val_malli_sah')])]}), (0, 0, {'attribute_id': ref('attr_koko'), 'value_ids': [(6, 0, [ref('val_koko_s'), ref('val_koko_m'), ref('val_koko_l'), ref('val_koko_xl')])]}), (0, 0, {'attribute_id': ref('attr_vari'), 'value_ids': [(6, 0, [ref('val_vari_mus'), ref('val_vari_val'), ref('val_vari_pun'), ref('val_vari_sin'), ref('val_vari_vih')])]})]"/>
+        </record>
+
+        <record id="pt_polkupyora" model="product.template">
+            <field name="name">Polkupyörä</field>
+            <field name="default_code">PP</field>
+            <field name="type">consu</field>
+            <field name="is_storable" eval="True"/>
+            <field name="categ_id" ref="categ_sale"/>
+            <field name="list_price" eval="1190"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="False"/>
+            <field name="route_ids" eval="[(6, 0, [ref('stock.route_warehouse0_mto')])]"/>
+            <field name="allow_out_of_stock_order" eval="True"/>
+            <field name="is_published" eval="True"/>
+            <field name="public_categ_ids" eval="[(6, 0, [ref('pubcat_bikes')])]"/>
+            <field name="sale_delay" eval="14"/>
+            <field name="description_sale">Tilauksesta koottava polkupyörä. Runko maalataan valitsemallasi värillä.</field>
+            <field name="description_ecommerce">&lt;p&gt;&lt;b&gt;Rakenna oma pyöräsi.&lt;/b&gt; Valitse malli, väri, koko ja vaihteisto. Maalaamme rungon ja kokoamme pyörän tilauksesi mukaan omalla tehtaallamme Tampereella. Toimitusaika noin 2 viikkoa.&lt;/p&gt;&lt;p&gt;&lt;i&gt;Tämä on AvoinPLM-demon kuvitteellinen tuote. Tilauksia ei toimiteta eikä laskuteta.&lt;/i&gt;&lt;/p&gt;</field>
+            <field name="optional_product_ids" eval="[(6, 0, [ref('pt_lv_loka'), ref('pt_lv_teli'), ref('pt_lv_valo'), ref('pt_lv_lukko')])]"/>
+            <field name="accessory_product_ids" eval="[(6, 0, [])]"/>
+            <field name="attribute_line_ids" eval="[(0, 0, {'attribute_id': ref('attr_malli'), 'value_ids': [(6, 0, [ref('val_malli_maa'), ref('val_malli_man'), ref('val_malli_gra'), ref('val_malli_kau'), ref('val_malli_sah')])]}), (0, 0, {'attribute_id': ref('attr_vari'), 'value_ids': [(6, 0, [ref('val_vari_mus'), ref('val_vari_val'), ref('val_vari_pun'), ref('val_vari_sin'), ref('val_vari_vih')])]}), (0, 0, {'attribute_id': ref('attr_koko'), 'value_ids': [(6, 0, [ref('val_koko_s'), ref('val_koko_m'), ref('val_koko_l'), ref('val_koko_xl')])]}), (0, 0, {'attribute_id': ref('attr_vaiht'), 'value_ids': [(6, 0, [ref('val_vaiht_per'), ref('val_vaiht_pre')])]})]"/>
+        </record>
+    </data>
+</odoo>
